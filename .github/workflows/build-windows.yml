@@ -23,12 +23,7 @@ jobs:
           install: |
             mingw-w64-x86_64-gcc
             base-devel
-            mingw-w64-x86_64-wxWidgets
-
-      - name: Install wxWidgets headers (for wx/msw/wx.rc)
-        run: |
-          pacman -Sy --noconfirm
-          pacman -S --noconfirm mingw-w64-x86_64-wxWidgets
+            mingw-w64-x86_64-wxwidgets3.2-msw
 
       - name: Compile resources
         run: |
