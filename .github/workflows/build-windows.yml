@@ -23,7 +23,7 @@ jobs:
           install: |
             mingw-w64-x86_64-gcc
             base-devel
-            mingw-w64-x86_64-wxwidgets3.2-msw
+            mingw-w64-x86_64-wxwidgets
 
       - name: Compile resources
         run: |
@@ -34,7 +34,4 @@ jobs:
           g++ `wx-config --cxxflags` -o MpcAsfTool.exe *.cpp resource.o `wx-config --libs`
 
       - name: Upload Executable
-        uses: actions/upload-artifact@v4
-        with:
-          name: MpcAsfToolExe
-          path: MpcAsfTool.exe
+        uses:
