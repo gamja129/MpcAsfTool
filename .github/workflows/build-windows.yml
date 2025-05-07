@@ -23,7 +23,7 @@ jobs:
           install: |
             mingw-w64-x86_64-gcc
             base-devel
-            mingw-w64-x86_64-wxwidgets
+            mingw-w64-x86_64-wxWidgets3.2-msw
 
       - name: Compile resources
         run: |
