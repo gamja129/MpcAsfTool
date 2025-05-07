@@ -34,4 +34,7 @@ jobs:
           g++ `wx-config --cxxflags` -o MpcAsfTool.exe *.cpp resource.o `wx-config --libs`
 
       - name: Upload Executable
-        uses:
+        uses: actions/upload-artifact@v4
+        with:
+          name: MpcAsfToolExe
+          path: MpcAsfTool.exe
